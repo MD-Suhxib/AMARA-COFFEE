@@ -30,13 +30,13 @@ export function FloatingNav() {
     <nav
       aria-label="Section navigation"
       className={cn(
-        "fixed inset-x-0 bottom-5 z-50 flex justify-center transition-all duration-300",
+        "fixed inset-x-0 bottom-3 sm:bottom-5 z-50 flex justify-center px-3 sm:px-4 transition-all duration-300",
         hidden ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100",
       )}
     >
       <div
         className={cn(
-          "flex items-center justify-center gap-10 rounded-lg px-10 py-3 text-sm text-white shadow-lg backdrop-blur-xl",
+          "flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-10 rounded-lg px-4 sm:px-6 md:px-8 lg:px-10 py-2 sm:py-3 text-xs sm:text-sm md:text-base text-white shadow-lg backdrop-blur-xl",
           "bg-white/10 border border-white/20",
           "hover:shadow-white/10 transition-all duration-300"
         )}
@@ -45,7 +45,7 @@ export function FloatingNav() {
           <Link
             key={it.href}
             href={it.href}
-            className="px-2 py-1 transition-colors hover:text-white/80"
+            className="px-2 sm:px-2.5 py-1 transition-colors hover:text-white/80 whitespace-nowrap text-xs sm:text-sm"
           >
             {it.label}
           </Link>
