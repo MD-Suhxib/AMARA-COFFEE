@@ -1,13 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 export default function BehindBean() {
   return (
     <section
       id="behind"
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24 text-white"
+      className="relative min-h-screen w-full overflow-hidden pt-0 pb-0 -mt-8 sm:-mt-12 md:-mt-12 lg:-mt-12 px-4 xs:px-5 sm:px-6 md:px-10 lg:px-16 text-white"
       style={{
         backgroundColor: "#1a1410",
         backgroundImage:
@@ -15,64 +14,56 @@ export default function BehindBean() {
         backgroundSize: "120px 100%",
       }}
     >
-      {/* Animated scroll indicator - hidden on mobile, visible on tablet+ */}
+      {/* Animated scroll indicator - hidden on mobile */}
       <motion.div
-        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center hidden sm:flex"
+        className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-40 flex-col items-center hidden md:flex"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        {/* Dot */}
         <motion.div
-          className="w-3 sm:w-4 h-3 sm:h-4 bg-white rounded-full mb-4 sm:mb-6"
+          className="w-3 md:w-4 h-3 md:h-4 bg-white rounded-full mb-4 md:mb-6"
           animate={{ opacity: [1, 0.5, 1] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         />
         
-        {/* Line extending down */}
         <motion.div
-          className="w-1 sm:w-1.5 bg-gradient-to-b from-white to-transparent"
+          className="w-1 md:w-1.5 bg-gradient-to-b from-white to-transparent"
           initial={{ height: 0 }}
-          whileInView={{ height: [200, 400] }}
+          whileInView={{ height: [150, 300] }}
           transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
           viewport={{ once: true }}
         />
       </motion.div>
 
-      {/* Floating Beans - responsive sizing and positioning */}
+      {/* Floating Beans - optimized for mobile */}
       <div className="absolute inset-0 behind-beans pointer-events-none">
-        <Image
+        <img
           src="https://cdn.prod.website-files.com/6694f91706f861444dd250c0/66952e8fa9955d9d2b113df9_realistic-coffee-bean%201.svg"
           alt=""
-          width={200}
-          height={200}
-          className="absolute left-[5%] sm:left-[10%] top-[10%] rotate-[-35deg] opacity-70 w-[100px] sm:w-[150px] md:w-[200px] h-auto"
+          className="absolute left-[3%] xs:left-[5%] sm:left-[8%] md:left-[10%] top-[8%] xs:top-[10%] rotate-[-35deg] opacity-60 md:opacity-70 w-[60px] xs:w-[80px] sm:w-[120px] md:w-[150px] lg:w-[200px] h-auto"
         />
-        <Image
+        <img
           src="https://cdn.prod.website-files.com/6694f91706f861444dd250c0/669cd4a20b910bdfe0a614a2_realistic-coffee-bean%203.svg"
           alt=""
-          width={160}
-          height={160}
-          className="absolute left-[15%] sm:left-[25%] top-[45%] rotate-[20deg] opacity-70 w-[80px] sm:w-[120px] md:w-[160px] h-auto"
+          className="absolute left-[8%] xs:left-[12%] sm:left-[18%] md:left-[25%] top-[40%] xs:top-[45%] rotate-[20deg] opacity-60 md:opacity-70 w-[50px] xs:w-[65px] sm:w-[90px] md:w-[120px] lg:w-[160px] h-auto"
         />
-        <Image
+        <img
           src="https://cdn.prod.website-files.com/6694f91706f861444dd250c0/66952e8fa9955d9d2b113df9_realistic-coffee-bean%201.svg"
           alt=""
-          width={220}
-          height={220}
-          className="absolute left-[2%] sm:left-[5%] bottom-[10%] rotate-[25deg] opacity-70 w-[110px] sm:w-[160px] md:w-[220px] h-auto"
+          className="absolute left-[1%] xs:left-[2%] sm:left-[3%] md:left-[5%] bottom-[8%] xs:bottom-[10%] rotate-[25deg] opacity-60 md:opacity-70 w-[70px] xs:w-[90px] sm:w-[130px] md:w-[160px] lg:w-[220px] h-auto"
         />
       </div>
 
-      {/* Content - responsive alignment and spacing */}
-      <div className="relative z-10 max-w-5xl w-full ml-auto mr-0">
+      {/* Content - improved mobile layout */}
+      <div className="relative z-10 max-w-full sm:max-w-4xl md:max-w-5xl w-full mx-auto sm:ml-auto sm:mr-0">
         <motion.h2
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold uppercase leading-none tracking-tight"
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-extrabold uppercase leading-[0.9] xs:leading-[0.92] sm:leading-none tracking-tight text-center sm:text-left"
         >
           BEHIND THE <br />
           BEAN
@@ -83,7 +74,7 @@ export default function BehindBean() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-6 sm:mt-8 max-w-2xl text-xs sm:text-sm md:text-base text-gray-200 leading-relaxed"
+          className="mt-5 xs:mt-6 sm:mt-7 md:mt-8 max-w-full sm:max-w-xl md:max-w-2xl text-[11px] xs:text-[12px] sm:text-[13px] md:text-[14px] lg:text-base text-gray-200 leading-relaxed text-center sm:text-left mx-auto sm:mx-0"
         >
           Every cup of coffee tells a story, and at Roastery, we believe in honoring the journey of each bean. From the
           lush highlands of Ethiopia to the vibrant plantations of Colombia, our beans are meticulously sourced from the
