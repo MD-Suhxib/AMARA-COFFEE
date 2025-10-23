@@ -6,7 +6,7 @@ export default function BehindBean() {
   return (
     <section
       id="behind"
-      className="relative min-h-screen w-full overflow-hidden pt-0 pb-0 -mt-8 sm:-mt-12 md:-mt-12 lg:-mt-12 px-4 xs:px-5 sm:px-6 md:px-10 lg:px-16 text-white"
+      className="relative min-h-screen w-full overflow-hidden pt-0 pb-0 -mt-48 sm:-mt-56 md:-mt-1 px-4 sm:px-6 md:px-10 lg:px-16 text-white"
       style={{
         backgroundColor: "#1a1410",
         backgroundImage:
@@ -37,33 +37,36 @@ export default function BehindBean() {
         />
       </motion.div>
 
-      {/* Floating Beans - optimized for mobile */}
+      {/* Floating Beans */}
       <div className="absolute inset-0 behind-beans pointer-events-none">
         <img
           src="https://cdn.prod.website-files.com/6694f91706f861444dd250c0/66952e8fa9955d9d2b113df9_realistic-coffee-bean%201.svg"
           alt=""
-          className="absolute left-[3%] xs:left-[5%] sm:left-[8%] md:left-[10%] top-[8%] xs:top-[10%] rotate-[-35deg] opacity-60 md:opacity-70 w-[60px] xs:w-[80px] sm:w-[120px] md:w-[150px] lg:w-[200px] h-auto"
+          className="absolute left-[5%] sm:left-[8%] md:left-[10%] top-[10%] rotate-[-35deg] opacity-60 md:opacity-70 w-[80px] sm:w-[120px] md:w-[150px] lg:w-[200px] h-auto"
         />
         <img
           src="https://cdn.prod.website-files.com/6694f91706f861444dd250c0/669cd4a20b910bdfe0a614a2_realistic-coffee-bean%203.svg"
           alt=""
-          className="absolute left-[8%] xs:left-[12%] sm:left-[18%] md:left-[25%] top-[40%] xs:top-[45%] rotate-[20deg] opacity-60 md:opacity-70 w-[50px] xs:w-[65px] sm:w-[90px] md:w-[120px] lg:w-[160px] h-auto"
+          className="absolute left-[12%] sm:left-[18%] md:left-[25%] top-[45%] rotate-[20deg] opacity-60 md:opacity-70 w-[65px] sm:w-[90px] md:w-[120px] lg:w-[160px] h-auto"
         />
         <img
           src="https://cdn.prod.website-files.com/6694f91706f861444dd250c0/66952e8fa9955d9d2b113df9_realistic-coffee-bean%201.svg"
           alt=""
-          className="absolute left-[1%] xs:left-[2%] sm:left-[3%] md:left-[5%] bottom-[8%] xs:bottom-[10%] rotate-[25deg] opacity-60 md:opacity-70 w-[70px] xs:w-[90px] sm:w-[130px] md:w-[160px] lg:w-[220px] h-auto"
+          className="absolute left-[2%] sm:left-[3%] md:left-[5%] bottom-[10%] rotate-[25deg] opacity-60 md:opacity-70 w-[90px] sm:w-[130px] md:w-[160px] lg:w-[220px] h-auto"
         />
       </div>
 
       {/* Content - improved mobile layout */}
-      <div className="relative z-10 max-w-full sm:max-w-4xl md:max-w-5xl w-full mx-auto sm:ml-auto sm:mr-0">
+      <div className="relative z-10 w-full mx-auto sm:ml-auto sm:mr-0 py-12 sm:py-20 md:py-24 lg:py-32 flex flex-col justify-center min-h-screen">
         <motion.h2
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-extrabold uppercase leading-[0.9] xs:leading-[0.92] sm:leading-none tracking-tight text-center sm:text-left"
+          className="font-extrabold uppercase leading-[0.85] sm:leading-[0.9] tracking-tight text-left mb-6 sm:mb-8 md:mb-10"
+          style={{
+            fontSize: 'clamp(3rem, 12vw, 10rem)',
+          }}
         >
           BEHIND THE <br />
           BEAN
@@ -74,7 +77,7 @@ export default function BehindBean() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-5 xs:mt-6 sm:mt-7 md:mt-8 max-w-full sm:max-w-xl md:max-w-2xl text-[11px] xs:text-[12px] sm:text-[13px] md:text-[14px] lg:text-base text-gray-200 leading-relaxed text-center sm:text-left mx-auto sm:mx-0"
+          className="max-w-full sm:max-w-xl md:max-w-2xl text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] text-gray-200 leading-relaxed text-left"
         >
           Every cup of coffee tells a story, and at Roastery, we believe in honoring the journey of each bean. From the
           lush highlands of Ethiopia to the vibrant plantations of Colombia, our beans are meticulously sourced from the
