@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
 
         {/* Main content - reduced gaps on mobile */}
-        <div className="relative z-20 flex flex-col justify-center min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 pb-8 sm:pb-12">
+        <div className="relative z-20 flex flex-col justify-center min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 pb-0 sm:pb-12">
           <div className="overflow-hidden mb-3 sm:mb-6 md:mb-8 lg:mb-10 mt-12 sm:mt-14 md:mt-20 lg:mt-24 text-center">
             <motion.h1
               className="text-white leading-none"
@@ -109,7 +109,7 @@ export default function Hero() {
 
           {/* Paragraph - improved mobile font size and spacing */}
           <motion.div
-            className="max-w-[340px] sm:max-w-[450px] md:max-w-[600px] text-white/90 space-y-3 sm:space-y-5 md:space-y-6 mb-6 sm:mb-10 md:mb-12 text-center sm:text-left mx-auto sm:mx-0 mt-8 sm:mt-24 md:mt-28 lg:mt-32"
+              className="max-w-[340px] sm:max-w-[450px] md:max-w-[600px] text-white/90 space-y-3 sm:space-y-5 md:space-y-6 mb-4 sm:mb-10 md:mb-12 text-center sm:text-left mx-auto sm:mx-0 mt-4 sm:mt-24 md:mt-28 lg:mt-32"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2.8 }}
